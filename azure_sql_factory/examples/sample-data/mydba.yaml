@@ -1,0 +1,55 @@
+mysql_db:
+  mysql_server_name: "mssql-server-1"
+  resource_group_name: "rg_1"
+  location: "eastus"
+  db_version: "12.0"
+  administrator_login: "mssql_admin"
+  administrator_login_password: "mssql_pass"
+  azuread_administrator:
+    login_username: "user1"
+    object_id: "4947a0ea-fdf3-4665-858f-09edba89fc5f"
+    tenant_id: "76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61"
+    azuread_authentication_only: 
+  connection_policy: "Default"
+  minimum_tls_version: "1.2"
+  public_network_access_enabled: "true"
+  outbound_network_restriction_enabled: "false"
+  tags:
+    dev: mysql_server
+
+  mysql_database_map:
+    sql-db-1: 
+      collation: "SQL_Latin1_General_CP1_CI_AS"
+      maintenance_configuration_name: 
+      ledger_enabled: false
+      license_type: "LicenseIncluded"
+      max_size_gb: 4
+      read_replica_count: "2"
+      read_scale: true
+      sku_name: "GP_S_Gen5_2"
+      storage_account_type: "Zone"
+      zone_redundant: true
+      transparent_data_encryption_enabled: true
+      threat_detection_policy:
+        state: "Enabled"
+        disabled_alerts:
+          - "Sql_Injection"
+          - "Sql_Injection_Vulnerability"
+          - "Access_Anomaly"
+        email_account_admin: "Enabled"
+        email_addresses:
+          - "admin@mysql.com"
+          - "user@mysql.com"
+        retention_day: "10"
+        storage_account_access_key: "111-111-111-111"
+        storage_endpoint: "https://example.blob.core.windows.net"
+      short_term_retention_policy:
+        retention_days: 7
+        backup_interval_in_hours: 12
+      long_term_retention_policy:
+        weekly_retention: "P1W"
+        monthly_retention: "P1M"
+        yearly_retention: "P1Y"
+        week_of_year: "1"
+      tags:
+        dev: mysql_db_1
