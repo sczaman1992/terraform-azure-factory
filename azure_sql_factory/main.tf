@@ -24,9 +24,3 @@ module "mysql_db" {
   tags                                 = each.value.tags
   mysql_database_map                   = each.value.mysql_database_map
 }
-
-
-
-variable "mysql_dir" {
-  type = string
-}

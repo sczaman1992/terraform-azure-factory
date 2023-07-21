@@ -101,9 +101,11 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_mysql_dir"></a> [mysql\_dir](#input\_mysql\_dir) | n/a | `string` | n/a | yes |
+| <a name="input_mysql_dir"></a> [mysql\_dir](#input\_mysql\_dir) | YAML directory | `string` | n/a | yes |
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_mysql_db"></a> [mysql\_db](#output\_mysql\_db) | Full Details of the mysql db Module |
 <!-- END_TF_DOCS -->
