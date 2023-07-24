@@ -7,7 +7,7 @@ on:
   pull_request:
 
 env:
-  ROOT_PATH: '${{github.workspace}}/examples/'   
+  ROOT_PATH: '${{github.workspace}}/azure_mongodb_factory/examples/'   
 
 jobs:
   setup:
