@@ -3,7 +3,7 @@ name: 'tf deploy to gcp'
 on:
   push:
     branches: 
-    - main 
+    - master 
   pull_request:
 
 env:
