@@ -1,8 +1,8 @@
-module "cosmosdb" {
+module "cosmosdb_example" {
   source       = "../"
-  cosmosdb_dir = "${path.module}/sample-data"
+  cosmosdb_dir = "./sample-data"
 }
 
 output "cosmosdb" {
-  value = module.cosmosdb
+  value = module.cosmosdb_example
 }
