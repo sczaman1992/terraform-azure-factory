@@ -36,7 +36,10 @@ jobs:
     - name: Terraform Init
       run: terraform init
       working-directory: ${{ env.ROOT_PATH }}
-
+    
+    - shell: bash
+      run: |
+        pwd
          
     # Generates an execution plan for Terraform
     - name: Terraform Plan
